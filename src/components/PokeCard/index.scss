@@ -5,22 +5,23 @@
   flex-wrap: wrap;
   &__name,
   &__id,
-  &__weight {
+  &__weight,
+  & img {
     width: 100%;
     text-align: center;
     border-radius: 1rem;
     background-color: white;
-    box-shadow: inset 10px 10px 5px 0px rgba(0,0,0,0.05);
+    box-shadow: inset 10px 10px 10px 0px rgba(0,0,0,0.05);
+    color: darkcyan;
+    font-weight: 700;
   }
-  &__name {
-
+  & h3 {
+    margin: 1rem auto;
   }
-
-  &__id {
-
-  }
-
-  &__weight {
-
+  &__type {
+    background-color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 3rem;
+    box-shadow: inset 10px 10px 10px 0px rgba(0,0,0,0.05);
   }
 }
