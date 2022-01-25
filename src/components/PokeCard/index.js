@@ -25,14 +25,18 @@ function PokeCard(props) {
   const properName = name && name[0].toUpperCase() + name.slice(1);
   return (
     <div className="card">
-      <p className="card__name">Name: {name && properName}</p>
-      <p className="card__id">Id: {id}</p>
-      <p className="card__weight">Weight: {weight} kg</p>
+      <p className="card__name">Name: <span>{name && properName}</span></p>
+      <p className="card__id">Id: <span>{id}</span></p>
+      <p className="card__weight">Weight: <span>{weight} kg</span></p>
       {types &&
         types.map((pokemon, i) => {
           const type = pokemon.type.name;
           const properType = type && type[0].toUpperCase() + type.slice(1);
-          return <h3 key={i} className="card__type">{properType}</h3>;
+          return (
+          <div className={`type ${type}`}>
+          <h3 key={i} className="card__type">{properType}</h3>
+          </div>
+          )
         })}
       {sprites && <img src={sprites.front_default} className="card__img" alt={name} />}
     </div>
